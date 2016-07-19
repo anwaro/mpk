@@ -1,0 +1,654 @@
+<div class="left-col" id="wyszukiwarka" tabindex="0">
+
+    
+    <span id="wcag-h1" class="help-1 ico-main-search-4 pover qhelp" data-container="body" data-toggle="popover" data-placement="auto left" data-content="Połączenie można wyszukać jako bezpośrednią relację pomiędzy dwoma miejscowościami lub z wykorzystaniem funkcji „Dodaj miejscowość pośrednią&quot;. Wybierając tą opcję można zaplanować podróż z przesiadką oraz określić  jej czas." data-qhelp-name="pola-stacje" data-original-title="" title="">?
+        <span class="wcag-hide">Połączenie można wyszukać jako bezpośrednią relację pomiędzy dwoma miejscowościami lub z wykorzystaniem funkcji „Dodaj miejscowość pośrednią". Wybierając tą opcję można zaplanować podróż z przesiadką oraz określić  jej czas.</span></span>
+    <div class="wcag-outline-wrp"><h2 class="wcag-hide">Wyszukiwarka połączeń kolejowych - wyszukaj pociąg</h2></div>
+    <form novalidate="novalidate" action="http://rozklad-pkp.pl/pl/tp?OK#focus" name="formular" method="get" class="form-horizontal" onsubmit="return validateEvaNumbers()">
+    
+        <div class="row from">
+            <div class="col-1">
+                <!-- <img src="/img/content/icons/from.png" class="ico-search from" alt="" /> -->
+                <span title="" data-original-title="" id="wcag-h-from" class="ico-main-search pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="Stacja początkowa. Po wpisaniu pierwszych liter, system podpowie jej nazwę oraz zapamięta ostatnio wyszukiwane miejscowości." data-qhelp-name="stacja-poczatkowa"><img src="/img/content/icons/main/from.png" alt=""><span class="wcag-hide">Stacja początkowa. Po wpisaniu pierwszych liter, system podpowie jej nazwę oraz zapamięta ostatnio wyszukiwane miejscowości.</span></span>
+            </div><!--  col-1 -->
+            <div class="col-2">
+                <!-- Text input-->
+                <div class="input-group active">
+                    <span class="input-group-addon upper">
+                        Z:
+                    </span>
+                    <fieldset>
+                        <label for="from-station" class="wcag-hide">Ze stacji:</label>
+                        <input name="REQ0JourneyStopsS0A" value="1" type="hidden">
+                        <span style="display: none;" class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" id="from-station" class="form-control station-autocomplete z1 ui-autocomplete-input" name="REQ0JourneyStopsS0G" value="" placeholder="Wpisz nazwę stacji" type="text">
+                    </fieldset>
+                    <button class="g-maps-to" type="button">
+                        <img src="/img/content/icons/map.png" alt="Mapa">
+                    </button><!-- g-maps-to -->
+                    <input name="REQ0JourneyStopsS0ID" value="" type="hidden">
+                </div><!-- input-group -->
+            </div><!-- col-2 -->
+        </div><!-- row from -->
+        <!-- ########## MIDPOINT ########## -->
+        <div class="row midpoint midpoint-1">
+            <div class="col-1">
+                <a href="#" class="add-mid">
+                    <span class="md-1"><img src="/img/content/icons/main/plus.png" style="display: none" class="xs-pic" alt="">Dodaj stację pośrednią</span>
+                    <!--  <img src="/img/content/icons/midpoint.png" class="ico-search midpoint" alt="Przez" /> -->
+                    <span title="" data-original-title="" class="ico-main-search-2 midpoint pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="Możliwość dodania stacji pośredniej tj. można zaplanować podróż z uwzględnieniem np. pobytu w określonej miejscowości" data-qhelp-name="dodaj-posrednia"><img src="/img/content/icons/main/plus.png" alt=""><span class="wcag-hide">Możliwość dodania stacji pośredniej tj. można zaplanować podróż z uwzględnieniem np. pobytu w określonej miejscowości</span></span>
+                </a>
+                <a href="#" class="rem-mid" style="display: none">
+                    <span class=" md-1 md-1-del"><img src="/img/content/icons/main/minus.png" style="display: none" class="xs-pic" alt="">Usuń stację pośrednią</span>
+                    <span title="" data-original-title="" class="ico-main-search-2 midpoint pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="" data-qhelp-name="usun-posrednia"><img src="/img/content/icons/main/minus.png" alt=""></span>
+                </a>
+            </div><!-- col-1 -->
+        </div><!-- row midpoint -->
+        <!-- ########## MIDPOINT ########## -->
+        <!-- ########## MIDPOINT 1 ########## -->
+        <div class="row mid mid-1">
+            <div class="col-1">
+                <!-- <img src="/img/content/icons/midpoint.png" class="ico-search from" alt="Przez" /> -->
+            </div><!--  col-1 -->
+            <div class="col-2">
+                <!-- Text input-->
+                <div class="input-group">
+                    <span class="input-group-addon upper">Przez:</span>
+                    <label for="wcag-via" class="wcag-hide">Przez</label>
+                    <span style="display: none;" class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" id="wcag-via" class="form-control station-autocomplete ui-autocomplete-input" name="REQ0JourneyStops1.0G" value="" maxlength="60" placeholder="Wpisz nazwę stacji" type="text">
+                    <span title="" data-original-title="" class="input-group-addon iga-1 upper pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="" data-qhelp-name="czas-pobytu">Czas<br> pobytu:</span>
+                    <!-- ########## HOUR ########## -->
+                    <div class="row mid-point-time">
+                        <div class="btn-group-vertical hours">
+                            <button type="button" class="left btn btn-time-up">
+                                <img src="/img/content/icons/arrow-up-5.png" class="center" alt="Godzinę później">
+                            </button>
+                            <button type="button" class="left btn btn-down-up">
+                                <img src="/img/content/icons/arrow-down-5.png" class="center" alt="Godzinę wcześniej">
+                            </button>
+                        </div><!-- btn-group-vertical hours -->
+                        <div class="data-field" aria-live="polite" aria-atomic="true">
+                            <label for="hour2" class="wcag-hide">Wpisz godzinę <span>Format GG:MM</span></label>
+                            <input style="text-align: right;" id="hour2" class="form-control md-1" value="" placeholder="00:15" type="text"><input name="REQ0JourneyStopover1" type="hidden">
+                        </div><!-- data-field -->
+                        <div class="btn-group-vertical minutes">
+                            <button type="button" class="left btn btn-time-up">
+                                <img src="/img/content/icons/arrow-up-5.png" class="center" alt="5 minut później">
+                            </button>
+                            <button type="button" class="left btn btn-down-up">
+                                <img src="/img/content/icons/arrow-down-5.png" class="center" alt="5 minut wcześniej">
+                            </button>
+                        </div><!-- btn-group-vertical minutes -->
+                    </div><!-- row -->
+                    <!-- ########## HOUR ########## -->
+                </div><!-- input-group -->
+            </div><!-- col-2 -->
+        </div><!-- row to -->
+        <!-- ########## MIDPOINT 1 ########## -->
+        <!-- ########## MIDPOINT ########## -->
+        <div class="row midpoint midpoint-2">
+            <div class="col-1">
+                <a href="#" class="add-mid">
+                    <span class="md-1 upper"><img src="/img/content/icons/main/plus.png" style="display: none" class="xs-pic" alt="">Dodaj stację pośrednią</span>
+                    <!-- <img src="/img/content/icons/midpoint.png" class="ico-search midpoint" alt="Przez" /> -->
+                    <span title="" data-original-title="" class="ico-main-search-2 midpoint pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="Możliwość dodania stacji pośredniej tj. można zaplanować podróż z uwzględnieniem np. pobytu w określonej miejscowości" data-qhelp-name="dodaj-posrednia"><img src="/img/content/icons/main/plus.png" alt=""><span class="wcag-hide">Możliwość dodania stacji pośredniej tj. można zaplanować podróż z uwzględnieniem np. pobytu w określonej miejscowości</span></span>
+                </a>
+                <a href="#" class="rem-mid" style="display: none">
+                    <span class=" md-1 md-1-del"><img src="/img/content/icons/main/minus.png" style="display: none" class="xs-pic" alt="">Usuń stację pośrednią</span>
+                    <span title="" data-original-title="" class="ico-main-search-2 midpoint pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="" data-qhelp-name="usun-posrednia"><img src="/img/content/icons/main/minus.png" alt=""></span>
+                </a>
+            </div><!-- col-1 -->
+        </div><!-- row midpoint -->
+        <!-- ########## MIDPOINT ########## -->
+        <!-- ########## MIDPOINT 2 ########## -->
+        <div class="row mid mid-2">
+            <div class="col-1">
+                <!-- <img src="/img/content/icons/midpoint.png" class="ico-search from" alt="Przez" /> -->
+            </div><!--  col-1 -->
+            <div class="col-2">
+                <!-- Text input-->
+                <div class="input-group">
+                    <span class="input-group-addon upper">Przez:</span>
+                    <span style="display: none;" class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="form-control station-autocomplete ui-autocomplete-input" name="REQ0JourneyStops2.0G" value="" maxlength="60" placeholder="Wpisz nazwę stacji" type="text">
+                    <span title="" data-original-title="" class="input-group-addon iga-1 pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="" data-qhelp-name="czas-pobytu">Czas<br> pobytu:</span>
+                    <!-- ########## HOUR ########## -->
+                    <div class="row mid-point-time">
+                        <div class="btn-group-vertical hours">
+                            <button type="button" class="left btn btn-time-up">
+                                <img src="/img/content/icons/arrow-up-5.png" class="center" alt="Godzinę później">
+                            </button>
+                            <button type="button" class="left btn btn-down-up">
+                                <img src="/img/content/icons/arrow-down-5.png" class="center" alt="Godzinę wcześniej">
+                            </button>
+                        </div><!-- btn-group-vertical hours -->
+                        <div class="data-field">
+                            <input style="text-align: right;" class="form-control md-1" value="" placeholder="00:15" type="text"><input name="REQ0JourneyStopover2" type="hidden">
+                        </div><!-- data-field -->
+                        <div class="btn-group-vertical minutes">
+                            <button type="button" class="left btn btn-time-up">
+                                <img src="/img/content/icons/arrow-up-5.png" class="center" alt="5 minut później">
+                            </button>
+                            <button type="button" class="left btn btn-down-up">
+                                <img src="/img/content/icons/arrow-down-5.png" class="center" alt="5 minut wcześniej">
+                            </button>
+                        </div><!-- btn-group-vertical minutes -->
+                    </div><!-- row -->
+                    <!-- ########## HOUR ########## -->
+                </div><!-- input-group -->
+            </div><!-- col-2 -->
+        </div><!-- row to -->
+        <!-- ########## MIDPOINT 2 ########## -->
+        <!-- midpage -->
+        <div class="row to">
+            <div class="col-1">
+                <!-- <img src="/img/content/icons/to.png" class="ico-search to" alt=""/> -->
+                <span title="" data-original-title="" id="wcag-h-to" class="ico-main-search pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="Stacja docelowa. Po wpisaniu pierwszych liter, system podpowie jej nazwę oraz zapamięta ostatnio wyszukiwane miejscowości." data-qhelp-name="stacja-koncowa"><img src="/img/content/icons/main/to.png" alt=""><span class="wcag-hide">Stacja docelowa. Po wpisaniu pierwszych liter, system podpowie jej nazwę oraz zapamięta ostatnio wyszukiwane miejscowości.</span></span>
+            </div><!--  col-1 -->
+            <div class="col-2">
+                <!-- Text input-->
+                <div class="input-group active">
+                    <span class="input-group-addon upper">
+                        Do:
+                    </span>
+                    <fieldset>
+                        <label for="to-station" class="wcag-hide">Do stacji:</label>
+                        <input name="REQ0JourneyStopsZ0A" value="1" type="hidden">
+                        <span style="display: none;" class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" id="to-station" class="form-control station-autocomplete z1 ui-autocomplete-input" name="REQ0JourneyStopsZ0G" value="" placeholder="Wpisz nazwę stacji" type="text">
+                    </fieldset>
+                    <button class="g-maps-to" type="button">
+                        <img src="/img/content/icons/map.png" alt="Mapa">
+                    </button><!-- g-maps-to -->
+                    <input name="REQ0JourneyStopsZ0ID" value="" type="hidden">
+                </div><!-- input-group -->
+            </div><!-- col-2 -->
+        </div><!-- row from -->
+        <!-- ########## DATE ########## -->
+        <!-- ########## DATE CONTAINER ########## -->
+        <div class="row date-container" id="date-pick">
+            <div class="date-wrapper">
+                <div class="date-box"></div><!-- data-box -->
+                <div class="row data-picker">
+                    <div class="date-input-box">
+                        <span class="name-hour upper">Wpisz godzinę</span><!-- name-hour -->
+                        <br>
+                        <div class="hour-input-field">
+                            <!-- <span>Wpisz godzin&#281; lub <br />skorzystaj z suwak&#243;w</span> -->
+                            <!-- <input type="text" id="hour-callendar" class="form-control"  placeholder="" /> --><!-- day-hour -->
+                            <!-- ########## HOUR ########## -->
+                            <div class="row">
+                                <div class="btn-group-vertical hours">
+                                    <ul class="wcag-flat">
+                                        <li>
+                                            <button type="button" class="left btn btn-time-up">
+                                                <img src="/img/content/icons/arrow-up-5.png" class="center" alt="Godzinę wcześniej">
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="left btn btn-down-up">
+                                                <img src="/img/content/icons/arrow-down-5.png" class="center" alt="Godzinę później">
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div><!-- btn-group-vertical hours -->
+                                <div class="data-field" aria-live="polite" aria-atomic="true">
+                                    <fieldset>
+                                        <label for="hour0" class="wcag-hide">Wpisz godzinę <span>Format GG:MM</span></label>
+                                        <input value="19:57" style="text-align: right;" id="hour0" class="day-hour form-control" placeholder="" type="text"><!-- day-hour -->
+                                    </fieldset>
+                                </div><!-- data-field -->
+                                <div class="btn-group-vertical minutes">
+                                    <ul class="wcag-flat">
+                                        <li>
+                                            <button type="button" class="left btn btn-time-up">
+                                                <img src="/img/content/icons/arrow-up-5.png" class="center" alt="1 minut wcześniej">
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="left btn btn-down-up">
+                                                <img src="/img/content/icons/arrow-down-5.png" class="center" alt="1 minut później">
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div><!-- btn-group-vertical minutes -->
+                            </div><!-- row -->
+                            <!-- ########## HOUR ########## -->
+                        </div><!-- hour-input-field -->
+                        <div id="slider-horizontal"></div>
+                        <span class="hour-slider upcase">Godzina</span>
+                        <!-- <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" /> -->
+                        <div id="slider-horizontal2"></div>
+                        <span class="minute-slider upcase">Minuta</span>
+                        <!-- <input type="text" id="amount2" style="border: 0; color: #f6931f; font-weight: bold;" /> -->
+                    </div><!-- date-input-box -->
+                    <button type="button" class="btn btn-default pick-date">Wybierz dzień</button>
+                    <button type="button" class="btn btn-default now">Teraz</button>
+                </div><!-- row -->
+            </div><!-- date-wrapper -->
+        </div><!-- data-container -->
+        <!-- ########## DATA CONTAINER ########## -->
+        <div class="row data-picker">
+            <span title="" data-original-title="" id="wcag-h2" class="help-2 ico-main-search-4 p-left pover qhelp" data-container="body" data-toggle="popover" data-placement="auto left" data-content="Godzinę można wpisać z klawiatury klikając na pole godziny lub zmienić ją posługując się strzałkami godzin/minut. Podróż można zaplanować podając godzinę odjazdu ze stacji początkowej lub godzinę przyjazdu do stacji docelowej." data-qhelp-name="pola-czas">?<span class="wcag-hide">Godzinę można wpisać z klawiatury klikając na pole godziny lub zmienić ją posługując się strzałkami godzin/minut. Podróż można zaplanować podając godzinę odjazdu ze stacji początkowej lub godzinę przyjazdu do stacji docelowej.</span></span>
+            <div class="col-1">
+                <!-- <img src="/img/content/icons/clock.png" class="ico-search clock" alt="Zegar"/> -->
+                <span title="" data-original-title="" id="wcag-h-time" class="time ico-main-search pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="Wybór daty i godziny. Datę można wybrać klikając w symbol kalendarza i wybierając określony dzień lub zmienić datę posługując się strzałkami w prawo lub w lewo." data-qhelp-name="wybierz-godzine"><img src="/img/content/icons/main/time.png" alt=""><span class="wcag-hide">Wybór daty i godziny. Datę można wybrać klikając w symbol kalendarza i wybierając określony dzień lub zmienić datę posługując się strzałkami w prawo lub w lewo.</span></span>
+            </div><!-- col-1 -->
+            <div class="col-2">
+                <!-- ########## DATE ########## -->
+                <span class="name-data upper">Wybierz dzień</span><!-- name-data -->
+                <div class="row">
+                    <button type="button" class="left btn-pkp-reverse">
+                        <img src="/img/content/icons/arrow-left-4.png" class="center" alt="Dzień wcześniej">
+                    </button>
+                    <div class="data-filed" aria-live="polite" aria-atomic="true"><span style="float: none; margin-top: 7px;" class="day-name">ŚRODA </span><span class="day-number">16 </span><span style="float: none;" class="day-month">GRUDZIEŃ </span><span style="float: none;" class="day-year">2015 </span><input value="16.12.15" name="date" type="hidden"><input value="16.12.15" name="dateStart" type="hidden"><input value="16.12.15" name="dateEnd" type="hidden"><input value="16.12.15" name="REQ0JourneyDate" type="hidden"><input value="20:30" name="time" type="hidden"><input value="20:30" name="REQ0JourneyTime" type="hidden"></div><!-- data-field -->
+                    <button type="button" class="right btn-pkp-reverse">
+                        <img src="/img/content/icons/arrow-right-4.png" class="center" alt="Dzień później">
+                    </button>
+                </div><!-- row -->
+                <!-- ########## DATE ########## -->
+                <div class="callender">
+                    <span title="" data-original-title="" class="img-data-picke ico-main-search-2 pover qhelp pointer" data-container="body" data-toggle="popover" data-placement="top" data-content="Wybór daty odjazdu bądź przyjazdu pociągu" data-qhelp-name="wybierz-date"><img src="/img/content/icons/main/cal.png" alt="Wybierz datę"><span class="wcag-hide">Wybór daty odjazdu bądź przyjazdu pociągu</span></span>
+                    <span class="upper pointer"><img src="/img/content/icons/main/cal.png" style="display:none;" alt="" class="xs-pic">Wybierz datę</span>
+                    <!-- <img src="/img/content/icons/data-picker.png" class="img-data-picker" alt="Wybierz dat&#281;" /> -->
+                </div><!-- callender -->
+                <div class="line"></div>
+            </div><!-- col-2 -->
+            <div class="col-3">
+                <!-- ########## HOUR ########## -->
+                <span class="name-hour upper">Wpisz godzinę</span><!-- name-hour -->
+                <div class="row">
+                    <div class="btn-group-vertical hours">
+                        <ul class="wcag-flat">
+                            <li>
+                                <button type="button" class="left btn btn-time-up">
+                                    <img src="/img/content/icons/arrow-up-5.png" class="center" alt="Godzinę wcześniej">
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="left btn btn-down-up">
+                                    <img src="/img/content/icons/arrow-down-5.png" class="center" alt="Godzinę później">
+                                </button>
+                            </li>
+                        </ul>
+                        <!-- /.wcag-flat -->
+                    </div><!-- btn-group-vertical hours -->
+                    <div class="data-field">
+                        <fieldset>
+                            <label for="hour" class="wcag-hide">Wpisz godzinę <span>Format GG:MM</span></label>
+                            <input value="19:57" style="text-align: right;" id="hour" class="day-hour form-control" placeholder="" type="text"><!-- day-hour -->
+                        </fieldset>
+                    </div><!-- data-field -->
+                    <div class="btn-group-vertical minutes">
+                        <ul class="wcag-flat">
+                            <li>
+                                <button type="button" class="left btn btn-time-up">
+                                    <img src="/img/content/icons/arrow-up-5.png" class="center" alt="1 minut wcześniej">
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="left btn btn-down-up">
+                                    <img src="/img/content/icons/arrow-down-5.png" class="center" alt="1 minut później">
+                                </button>
+                            </li>
+                        </ul>
+                        <!-- /.wcag-flat -->
+                    </div><!-- btn-group-vertical minutes -->
+                </div><!-- row -->
+                <!-- ########## HOUR ########## -->
+                <div class="checkbox1 pointer" tabindex="0">
+                    <fieldset>
+                        <label for="odj" class="wcag-hide">odjazdu</label>
+                        <label class=""><div style="position: relative;" class="iradio_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="odj" name="REQ0HafasSearchForw" value="1" checked="" type="radio"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div><span>odjazdu</span></label>
+                    </fieldset>
+                </div><!-- checkbox1 -->
+                <div class="checkbox2 pointer" tabindex="0">
+                    <fieldset>
+                        <label for="prz" class="wcag-hide">przyjazdu</label>
+                        <label><div style="position: relative;" class="iradio_minimal-blue"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="prz" name="REQ0HafasSearchForw" value="0" type="radio"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div><span>przyjazdu</span></label>
+                    </fieldset>
+                </div><!-- checkbox2 -->
+            </div><!-- col-3 -->
+        </div><!-- row data-picker -->
+        <!-- ########## DATA PICKER ########## -->
+        <!-- ########## DATA OPTIONS ########## -->
+        <div class="row data-options">
+        </div><!-- row data-options -->
+        <!-- ########## DATA OPTIONS ########## -->
+        <!-- ########## TRAVEL OPTIONS ########## -->
+        <div class="row travel-options panel-group in" id="accordion" style="height: auto;">
+            <span id="wcag-h3" class="help-3 ico-main-search-4 pover qhelp" data-container="body" data-toggle="popover" data-placement="auto left" data-content="Wybór dodatkowych opcji połączenia - opcje dodatkowe pozwalają na dokładniejsze dostosowanie połączenia do swoich potrzeb.  Możliwy jest między innymi wybór połączenia bezpośredniego, pociągu z miejscem dla osób z dziećmi i/lub przewozem roweru oraz określenie połączenia ze względu na rodzaj transportu lub przewoźnika." data-qhelp-name="pola-opcje-dodatkowe" data-original-title="" title="">?<span class="wcag-hide">Wybór dodatkowych opcji połączenia - opcje dodatkowe pozwalają na dokładniejsze dostosowanie połączenia do swoich potrzeb.  Możliwy jest między innymi wybór połączenia bezpośredniego, pociągu z miejscem dla osób z dziećmi i/lub przewozem roweru oraz określenie połączenia ze względu na rodzaj transportu lub przewoźnika.</span></span>
+            <div class="panel panel-default">
+                <a class="row options-header accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <span>Opcje połączeń:</span>
+                    <img src="/img/content/icons/arrow-down-3.png" class="arrow-down-3" alt="">
+                    <img src="/img/content/icons/arrow-up-2.png" class="arrow-up-2" alt="">
+                </a>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <fieldset>
+                        <legend class="wcag-hide">Opcje połaczeń</legend>
+                        <div class="row option">
+                            <img title="" data-original-title="" src="/img/content/icons/direct.png" alt="Połączenie bezpośrednie" class="pover qhelp checkbox-clicker" data-container="body" data-toggle="popover" data-placement="top" data-content="Połączenie bezpośrednie" data-qhelp-name="polaczenie-bezposrednie">
+                            <div class="checkbox3">
+                                <label for="directCheckbox" class="wcag-hide">Połączenia bezpośrednie</label>
+                                <label class="">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="directCheckbox" class="checkbox directConnectionsOnlyCheckbox" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                    <span>Połączenia bezpośrednie</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row option">
+                            <img title="" data-original-title="" src="/img/content/icons/bike.png" alt="Przewóz rowerów" class="pover qhelp checkbox-clicker" data-container="body" data-toggle="popover" data-placement="top" data-content="Przewóz rowerów" data-qhelp-name="przewoz-rowerow">
+                            <div class="checkbox3">
+                                <label for="globalBike" class="wcag-hide">przewóz rowerów</label>
+                                <label class="">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="globalBike" class="checkbox" name="bikeEverywhere" value="1" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                    <span>przewóz rowerów</span>
+                                </label>
+                                <input name="existBikeEverywhere" value="yes" type="hidden">
+                            </div>
+                        </div>
+                        <div class="row option">
+                            <img title="" data-original-title="" src="/img/content/icons/disab.png" alt="Ułatwienia dla osób niepełnosprawnych" class="pover qhelp checkbox-clicker" data-container="body" data-toggle="popover" data-placement="top" data-content="Ułatwienia dla osób niepełnosprawnych" data-qhelp-name="niepelnosprawni">
+                            <div class="checkbox3">
+                                <label for="disabledTravellersCheckbox" class="wcag-hide">ułatwienia dla niepełnosprawnych</label>
+                                <label>
+                                    <div style="position: relative;" class="icheckbox_minimal-blue"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="disabledTravellersCheckbox" class="checkbox" name="REQ0HafasAttrInc" value="98" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                    <span>ułatwienia dla niepełnosprawnych</span>
+                                </label>
+                                <input name="existHafasAttrInc" value="yes" type="hidden">
+                            </div>
+                        </div>
+                        <div class="row option">
+                            <img title="" data-original-title="" src="/img/content/icons/mother-child.png" alt="Ułatwienia dla osób z dziećmi" class="pover qhelp checkbox-clicker" data-container="body" data-toggle="popover" data-placement="top" data-content="Ułatwienia dla osób z dziećmi" data-qhelp-name="dzieci">
+                            <div class="checkbox3">
+                                <label for="kidsCheckbox" class="wcag-hide">ułatwienia dla osób z dziećmi</label>
+                                <label>
+                                    <div style="position: relative;" class="icheckbox_minimal-blue"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="kidsCheckbox" class="checkbox" value="SA" name="REQ0HafasAttrInc" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                    <span>ułatwienia dla osób z dziećmi</span>
+                                </label>
+                                <input value="yes" name="existHafasAttrInc" type="hidden">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <a class="row options-footer accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    <span>Zaawansowane:</span>
+                    <img src="/img/content/icons/arrow-down-3.png" class="arrow-down-3" alt="Zaawansowane">
+                    <img src="/img/content/icons/arrow-up-2.png" class="arrow-up-2" alt="Zaawansowane">
+                </a>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <fieldset>
+                        <legend class="wcag-hide">Zaawansowane</legend>
+                        <h3 class="do-in">
+                            Środki transportu
+                        </h3>
+                        <div class="row option">
+                            <img src="/hafas-res/img/sel_prod_ice.gif" alt="Kolej dużych prędkości">
+                            <div class="checkbox3">
+                                <label for="product_0_0" class="wcag-hide">Koleje dużych prędkości</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="product_0_0" class="multicheck" name="REQ0JourneyProduct_prod_section_0_0" value="1" checked="checked" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                    <span>Koleje dużych prędkości</span>
+                                </label>
+                                <input class="multicheck-suboption" data-parent="product_0_0" name="REQ0JourneyProduct_prod_section_1_0" value="1" type="hidden">
+                                <input class="multicheck-suboption" data-parent="product_0_0" name="REQ0JourneyProduct_prod_section_2_0" value="1" type="hidden">
+                                <input class="multicheck-suboption" data-parent="product_0_0" name="REQ0JourneyProduct_prod_section_3_0" value="1" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option -->
+                        <div class="row option">
+                            <img src="/hafas-res/img/sel_prod_ic.gif" alt="EIP/EIC/EC/IC/Ex">
+                            <div class="checkbox3">
+                                <label for="product_0_1" class="wcag-hide">EIP/EIC/EC/IC/Ex</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="product_0_1" class="multicheck" name="REQ0JourneyProduct_prod_section_0_1" value="1" checked="checked" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                    <span>EIP/EIC/EC/IC/Ex</span>
+                                </label>
+                                <input class="multicheck-suboption" data-parent="product_0_1" name="REQ0JourneyProduct_prod_section_1_1" value="1" type="hidden">
+                                <input class="multicheck-suboption" data-parent="product_0_1" name="REQ0JourneyProduct_prod_section_2_1" value="1" type="hidden">
+                                <input class="multicheck-suboption" data-parent="product_0_1" name="REQ0JourneyProduct_prod_section_3_1" value="1" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option -->
+                        <div class="row option">
+                            <img src="/hafas-res/img/sel_prod_ir-d.gif" alt="IC/TLK/IR/RE/D/Posp.">
+                            <div class="checkbox3">
+                                <label for="product_0_2" class="wcag-hide">IC/TLK/IR/RE/D/Posp.</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="product_0_2" class="multicheck" name="REQ0JourneyProduct_prod_section_0_2" value="1" checked="checked" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                    <span>IC/TLK/IR/RE/D/Posp.</span>
+                                </label>
+                                <input class="multicheck-suboption" data-parent="product_0_2" name="REQ0JourneyProduct_prod_section_1_2" value="1" type="hidden">
+                                <input class="multicheck-suboption" data-parent="product_0_2" name="REQ0JourneyProduct_prod_section_2_2" value="1" type="hidden">
+                                <input class="multicheck-suboption" data-parent="product_0_2" name="REQ0JourneyProduct_prod_section_3_2" value="1" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option -->
+                        <div class="row option">
+                            <img src="/hafas-res/img/sel_prod_re-rb.gif" alt="Regio/Osobowe" style="">
+                            <div class="checkbox3">
+                                <label for="product_0_3" class="wcag-hide">Regio/Osobowe</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="product_0_3" class="multicheck" name="REQ0JourneyProduct_prod_section_0_3" value="1" checked="checked" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                    <span>Regio/Osobowe</span>
+                                </label>
+                                <input class="multicheck-suboption" data-parent="product_0_3" name="REQ0JourneyProduct_prod_section_1_3" value="1" type="hidden">
+                                <input class="multicheck-suboption" data-parent="product_0_3" name="REQ0JourneyProduct_prod_section_2_3" value="1" type="hidden">
+                                <input class="multicheck-suboption" data-parent="product_0_3" name="REQ0JourneyProduct_prod_section_3_3" value="1" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option -->
+                        <h3 class="do-in dn-2">
+                            Filtr
+                        </h3>
+                        <div class="row option op-2 connection-types">
+                            <span class="f-name">Typ</span>
+                            <div class="checkbox3">
+                                <select style="display: none;" id="optionList_0" name="REQ0JourneyProduct_opt_section_0_list">
+                                    <option value="0:000000">wszystkie połączenia</option>
+                                    <option value="1:100000">bezpośrednie połączenia</option>
+                                    <option value="2:010000">bezpośrednie z wagonami sypialnymi</option>
+                                    <option value="3:001000">bezpośrednie z miejscami do leżenia</option>
+                                </select><div class="btn-group bootstrap-select"><button data-id="optionList_0" type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"><div class="filter-option pull-left">wszystkie połączenia</div>&nbsp;<div class="caret"></div></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">wszystkie połączenia</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">bezpośrednie połączenia</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">bezpośrednie z wagonami sypialnymi</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">bezpośrednie z miejscami do leżenia</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+                            </div>
+                        </div>
+                        <div class="row option op-2">
+                            <span class="f-name">Połączenia</span>
+                            <div class="checkbox3">
+                                <fieldset>
+                                    <div style="position: relative;" class="icheckbox_minimal-blue"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="subOp" name="REQ0HafasOptimize1" value="0:1" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div><label for="subOp">&nbsp;możliwie szybko</label>
+                                    <input name="existOptimizePrice" value="1" type="hidden">
+                                </fieldset>
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-2 -->
+                        <div class="row option op-2">
+                            <span class="f-name">bez obowiązku rezerwacji</span>
+                            <div class="checkbox3">
+                                <div style="position: relative;" class="icheckbox_minimal-blue"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="withoutReservationServiceCheckbox" class="checkbox" value="RP" name="REQ0HafasAttrExc" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                <input value="yes" name="existHafasAttrExc" type="hidden">
+                            </div>
+                        </div>
+                        <div class="row option op-2">
+                            <span class="f-name">Czas przesiadki</span>
+                            <div class="checkbox3">
+                                <fieldset>
+                                    <select style="display: none;" id="chgDuration" name="REQ0HafasChangeTime">
+                                        <option value="0:1">krótki</option>
+                                        <option value="10:2">co najmniej 10 minut</option>
+                                        <option value="20:3">co najmniej 20 minut</option>
+                                        <option value="30:4">co najmniej 30 minut</option>
+                                    </select><div class="btn-group bootstrap-select"><button data-id="chgDuration" type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"><div class="filter-option pull-left">krótki</div>&nbsp;<div class="caret"></div></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">krótki</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">co najmniej 10 minut</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">co najmniej 20 minut</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">co najmniej 30 minut</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+                                </fieldset>
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-2 -->
+                        <div class="row option op-2 big-row">
+                            <span class="f-name">Czas oczekiwania</span>
+                            <div class="checkbox3">
+                                <fieldset>
+                                    <label>
+                                        <div style="position: relative;" class="icheckbox_minimal-blue"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" id="skipLongChg" name="REQ0HafasSkipLongChanges" value="1" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;szybkie przesiadki
+                                    </label>
+                                    <input name="existSkipLongChanges" value="0" type="hidden">
+                                </fieldset>
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-2 -->
+                    </fieldset>
+                </div><!-- collapseTwo -->
+            </div><!-- panel panel-default -->
+            <div class="panel panel-default hidden-mobile">
+                <a class="row options-header accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    <span>Wybór przewoźnika:</span>
+                    <img src="/img/content/icons/arrow-down-3.png" class="arrow-down-3" alt="Opcje połączeń">
+                    <img src="/img/content/icons/arrow-up-2.png" class="arrow-up-2" alt="Opcje połączeń">
+                </a>
+                <div id="collapseThree" class="panel-collapse collapse providers-checkboxes">
+                    <fieldset>
+                        <legend class="wcag-hide">Wybór przewoźnika</legend>
+                        <h2 class="do-in" style="display: none">
+                            Wybór przewoźnika
+                        </h2>
+                        <div class="row option op-3" style="padding-left: 15px; width: 100%">
+                            <div class="checkbox3">
+                                <label for="allProvidersCheckbox" class="wcag-hide">Regio/Osobowe</label>
+                                <label class="first ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" checked="checked" id="allProvidersCheckbox" onclick="handleCheckAllCheckbox()" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Zaznacz/odznacz wszystkich Przewoźników
+                                </label>
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P1" class="wcag-hide">PKP Intercity</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P1')" id="P1" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;PKP Intercity
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P1FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P5" class="wcag-hide">PKP SKM w Trójmieście</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P5')" id="P5" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;PKP SKM w Trójmieście
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P5FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P2" class="wcag-hide">Przewozy Regionalne</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P2')" id="P2" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Przewozy Regionalne
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P2FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P7" class="wcag-hide">Arriva RP</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P7')" id="P7" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Arriva RP
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P7FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P3" class="wcag-hide">Koleje Mazowieckie</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P3')" id="P3" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Koleje Mazowieckie
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P3FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P4" class="wcag-hide">Koleje Dolnośląskie</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P4')" id="P4" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Koleje Dolnośląskie
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P4FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P0" class="wcag-hide">Koleje Śląskie</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P0')" id="P0" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Koleje Śląskie
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P0FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P9" class="wcag-hide">Koleje Wielkopolskie</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P9')" id="P9" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Koleje Wielkopolskie
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P9FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P8" class="wcag-hide">SKM w Warszawie</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P8')" id="P8" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;SKM w Warszawie
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P8FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="P6" class="wcag-hide">WKD</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('P6')" id="P6" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;WKD
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="P6FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="O1" class="wcag-hide">Łódzka Kolej Aglomeracyjna</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('O1')" id="O1" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Łódzka Kolej Aglomeracyjna
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="O1FinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                        <div class="row option op-3 active">
+                            <div class="checkbox3">
+                                <label for="PZ" class="wcag-hide">Koleje Małopolskie</label>
+                                <label class="ac">
+                                    <div style="position: relative;" class="icheckbox_minimal-blue checked"><input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" onclick="handleServiceProviderCheckbox('PZ')" id="PZ" type="checkbox"><ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>&nbsp;Koleje Małopolskie
+                                </label>
+                                <input value="" name="REQ0HafasAttrExc" id="PZFinalValue" type="hidden">
+                            </div><!-- checkbox2 -->
+                        </div><!-- row option op-3 -->
+                    </fieldset>
+                </div><!-- collapseThree -->
+            </div><!-- panel panel-default -->
+        </div><!-- accordion -->
+        <!-- ########## TRAVEL OPTIONS ########## -->
+        <input name="existHafasAttrInc" value="yes" type="hidden">
+        <input name="existHafasAttrExc" value="yes" type="hidden">
+        <input name="wDayExt0" value="Pn|Wt|Śr|Cz|Pt|So|Nd" type="hidden">
+        <input name="start" value="start" type="hidden">
+        <input name="existUnsharpSearch" value="yes" type="hidden">
+        <input name="came_from_form" value="1" type="hidden">
+        <div class=" row control-group">
+            <div class="col-3">
+                <div class="controls">
+                    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">
+                        <span><span class="bolder">WYSZUKAJ</span> POŁĄCZENIE <img src="/img/content/icons/search.png" class="search-icon" alt=""></span>
+                        <span class="glyphicon glyphicon-repeat ico-main-search"></span>
+                    </button>
+                </div>
+            </div><!-- col-3 -->
+            <a href="http://rozklad-pkp.pl/pl" class="a-reload">
+                <div class="col-1">
+                    <!-- <img src="/img/content/icons/reset.png" class="ico-search reset" alt="Nowe zapytanie"   /> -->
+                    <span title="" data-original-title="" id="wcag-h-reload" class="reload ico-main-search pover qhelp" data-container="body" data-toggle="popover" data-placement="top" data-content="Wyczyść formularz" data-qhelp-name="nowe-zapytanie"><img src="/img/content/icons/main/reload.png" alt=""><span class="wcag-hide">Wyczyść formularz</span></span>
+                </div><!-- col-1 -->
+                <div class="col-2">
+                    <span><img src="/img/content/icons/main/reload.png" style="display: none" class="xs-pic" alt="">Nowe<br> zapytanie</span>
+                </div><!-- col-2 -->
+            </a>
+        </div>
+    </form>
+
+</div>
